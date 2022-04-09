@@ -1,0 +1,14 @@
+sudo:          false
+language:      node_js
+node_js:
+  - "7"
+install:       - npm install -g firebase-tools
+script:
+  - npm test
+  - gulp
+  - echo "Deploy!!"
+after_success:
+  - firebase deploy --project projectId --token $1/jmVdX6ZaM2aCB40qVnLZ31x4cmSSeFeSuNKDMkLiQv0
+cache:
+  directories:
+    - node_modules
