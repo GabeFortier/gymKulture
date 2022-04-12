@@ -97,7 +97,7 @@
 </head>
 <body>
     <script
-    src="https://www.paypal.com/sdk/js?enable-funding=venmo&client-id=AcBWxZU46Wzl3-5fpgVeuKnRq0NRq_RTUehtCgvpPl66Q3IFIXUi2XwSdh9uNl4PB9B5Vv1DRv2LdhjV"> // Required. Replace YOUR_CLIENT_ID with your sandbox client ID.
+    src="https://www.paypal.com/sdk/js?enable-funding=venmo&client-id=AeV8R6QqSCCMCzWhRXAD6VD9iJP8I2g3i25Diw0pIIa3dxMha2V0vH0qIhJFIaJjHOwuYtHR33aA6tMb"> // Required. Replace YOUR_CLIENT_ID with your sandbox client ID.
   </script>
      <!-- Navigation-->
     <nav class="navbar sticky-top navbar-light" style="background:rgb(255,255,255,0);">

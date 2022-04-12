@@ -160,13 +160,13 @@
         <h1 class="my-4"><?php echo $row["productName"]; ?>
         </h1>
       <div class="col-md-8 imagePlace">
-        <img class="card zoom img-responsive" src="<?php echo $row["picturePath"]; ?>" alt="" style="aspect-ratio:2/2.5">
+        <img class="card zoom img-responsive" src="<?php echo $row["picturePath"]; ?>" alt="" style="aspect-ratio:2/2.5;max-height:316px; max-width:420px;">
       </div>
   
       <div class="col-md-4">
         <h3 class="my-3"><?php echo $row["productName"]?></h3>
         <p><?php echo $row["DISC"]?></p>
-        <h3 class="my-3">Project Details</h3>
+        <h3 class="my-3">Product Details</h3>
         <ul>
           <li>Lorem Ipsum</li>
           <li>Dolor Sit Amet</li>
@@ -206,7 +206,7 @@
       <h4 class="my-4"><?php echo $row1["productName"]; ?>
         </h4>
         <a href="productDetail.php?productID=<?php echo $row1["id"]?>">
-              <img class="img-fluid card" src="<?php echo $row1["picturePath"]; ?>" style="aspect-ratio:2/2.5" alt="">
+              <img class="img-fluid card" src="<?php echo $row1["picturePath"]; ?>" style="aspect-ratio:2/2.5; height:243px;" alt="">
             </a>
       </div>
   

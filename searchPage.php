@@ -153,7 +153,7 @@
                 <div class="product-list">
 
                     <!-- Product image-->
-                    <a class="h-100" style="aspect-ratio:2/2.5" href="productDetail.php?productID=<?php echo $row["id"]?>"><img src="<?php echo $row["picturePath"]; ?>" class="img-fitted" style="aspect-ratio:2/2.5"></a>
+                    <a class="h-100" style="aspect-ratio:2/2.5" href="productDetail.php?productID=<?php echo $row["id"]?>"><img src="<?php echo $row["picturePath"]; ?>" class="img-fitted" style="aspect-ratio:2/2.5; height:243px;"></a>
                     <!-- Product details-->
                     <div class="card-body d-flex flex-column pt-4">
                         <div class="text-center mt-auto">
