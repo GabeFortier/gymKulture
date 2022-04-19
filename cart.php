@@ -97,10 +97,10 @@
 </head>
 <body>
     <script
-    src="https://www.paypal.com/sdk/js?enable-funding=venmo&client-id=AeV8R6QqSCCMCzWhRXAD6VD9iJP8I2g3i25Diw0pIIa3dxMha2V0vH0qIhJFIaJjHOwuYtHR33aA6tMb"> // Required. Replace YOUR_CLIENT_ID with your sandbox client ID.
+    src="https://www.paypal.com/sdk/js?enable-funding=venmo&client-id=AZmqBT6xdOXvkxvZ5nFg08hInr51r2bAd3NXt4LRSVxsv6lxy59YusyFsYtkYv_a_dZIMgmRVTNxuzZ0"> // Required. Replace YOUR_CLIENT_ID with your sandbox client ID.
   </script>
      <!-- Navigation-->
-    <nav class="navbar sticky-top navbar-light" style="background:rgb(255,255,255,0);">
+    <nav class="navbar navbar-expand sticky-top navbar-light" style="background:rgb(255,255,255,0);">
         <div class="px-4 px-lg-5">
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
@@ -117,7 +117,7 @@
             </div>
         </div>
         
-    <a class="nav-link nav-item" href="../index.html"><img src="./assets/trasnparent2_lgo2.png"></a>
+    <a class="nav-link nav-item" href="index.php"><img src="./assets/trasnparent2_lgo2.png"></a>
     <div style="display:flex; flex-direction: column-reverse; align-items: flex-end; justify-content: center;">  
                 <form method="POST" id="search" action="searchPage.php" class="mobile-form">
                 <div class="search small-search"> <input type="search" class="input" id="search" style="" name="searchInput" placeholder="Search" /> <button id="button" type="submit"><i class="fa fa-search"></i></button>

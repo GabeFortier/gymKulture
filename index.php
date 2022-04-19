@@ -78,26 +78,24 @@
 </head>
 
 <body>
-    <!-- Navigation-->
-    <nav class="navbar sticky-top navbar-light" style="background:rgb(255,255,255,0);">
-        <div class="px-4 px-lg-5">
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-            <div class="collapse navbar-collapse" style="text-align: left;" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0" style="text-align:left;">
-                    <li class="nav-item"><a class="nav-link active" aria-current="page" href="index.php">Home</a></li>
+
+
+<header id="header" class="header-fixed row justify-content-between">
+          <img  class="col-md-auto" src="./assets/trasnparent2_lgo2.png" id="speki-img" style="width:165px;">
+          <script>
+            $(document).ready(function(){
+              if($(window).width() < 768){
+                $('#speki-img').removeClass("col-md-auto");
+              }
+            });
+          </script>
+            <nav id="nav-menu-container" class="col-md-auto">
+              <ul class="nav-menu">
+              <li class="nav-item"><a class="nav-link active" aria-current="page" href="index.php">Home</a></li>
                     <li class="nav-item"><a class="nav-link active" aria-current="page" href="searchPage.php">All Products</a></li>
                     <li class="nav-item"><a class="nav-link active" aria-current="page" href="filteredList.php?prodTag=mens">Mens</a></li>
                     <li class="nav-item"><a class="nav-link active" aria-current="page" href="filteredList.php?prodTag=womens">Womens</a></li>
-                    </li>
-                </ul>
-          
-            </div>
-        </div>
-        
-    <a class="nav-link nav-item" href="../index.html"><img src="./assets/trasnparent2_lgo2.png"></a>
-    <div style="display:flex; flex-direction: column-reverse; align-items: flex-end; justify-content: center;">  
+              </ul>
                 <form method="POST" id="search" action="searchPage.php" class="mobile-form">
                 <div class="search small-search"> <input type="search" class="input" id="search" style="" name="searchInput" placeholder="Search" /> <button id="button" type="submit"><i class="fa fa-search"></i></button>
 </div>
@@ -128,6 +126,59 @@
                             ?></span>
                     </button>
                 </form>
+            </nav><!-- #nav-menu-container -->
+        </header>
+
+
+    <!-- Navigation-->
+    <!-- <nav class="nav-menu-container sticky-top navbar-light" style="background:rgb(255,255,255,0);">
+    <div class="px-4 px-lg-5">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" style="text-align: left;" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0" style="text-align:left;">
+                    <li class="nav-item"><a class="nav-link active" aria-current="page" href="index.php">Home</a></li>
+                    <li class="nav-item"><a class="nav-link active" aria-current="page" href="searchPage.php">All Products</a></li>
+                    <li class="nav-item"><a class="nav-link active" aria-current="page" href="filteredList.php?prodTag=mens">Mens</a></li>
+                    <li class="nav-item"><a class="nav-link active" aria-current="page" href="filteredList.php?prodTag=womens">Womens</a></li>
+                    </li>
+                </ul>
+                <div style="display:flex; flex-direction: column-reverse; align-items: flex-end; justify-content: center;">  
+                <form method="POST" id="search" action="searchPage.php" class="mobile-form">
+                <div class="search small-search"> <input type="search" class="input" id="search" style="" name="searchInput" placeholder="Search" /> <button id="button" type="submit"><i class="fa fa-search"></i></button>
+</div>
+    <script>
+        $(document).ready(function(){
+            $(".search").hover(function(){
+                $(this).toggleClass("small-search");
+            });
+        });
+    </script>
+                    
+                </form>
+                <form action="cart.php" id="nav-cart" class="" style="padding-bottom: 5px;">
+                    <button class="btn btn-outline-dark" type="submit">
+                        <i class="bi-cart-fill me-1"></i>
+                        Cart
+                        <span class="badge bg-dark text-white ms-1 rounded-pill"><?php
+                                // $cartCount = 0;
+                                // if($_SESSION["cart"] == null){
+                                //     echo "0";
+                                // }
+                                // else{
+                                //     foreach($_SESSION["cart"] as $key => $value){
+                                //         $cartCount += $_SESSION["cart"][$key]["item_quantity"];
+                                //     }
+                                //     echo $cartCount;
+                                // }
+                            ?></span>
+                    </button>
+                </form>
+            </div>
+        </div>
+        
+    
                 <script>
                     $(document).ready(function(){
                         if($(window).width() < 786){
@@ -137,7 +188,9 @@
                         }
                     });
                 </script></div>
-    </nav>
+                    <a class="nav-link nav-item" href="index.php"><img src="./assets/trasnparent2_lgo2.png"></a>    
+
+    </nav> -->
     <!-- Header-->
    <!-- class: bg-image-full  style: background-image: url('assets/back1.jpg') -->
     <!-- <header class="py-5 head row" style="padding-bottom:0px !important; background-color:#FFF; display:flex; flex-direction:column; align-content:center; margin-right:0px; margin-left:0px;">
@@ -153,7 +206,7 @@
     
         <div class="px-4 px-lg-5 mt-5 wow fadeInLeft" style="animation-name: fadeInLeft;">
             
-            <div class="flex-row flex-nowrap justify-content-start product-grid">
+            <div id="grid" class="flex-row flex-nowrap justify-content-start product-grid">
                 <?php
                 $query = "SELECT * FROM testtable";
                 $result = mysqli_query($con, $query);
@@ -173,7 +226,9 @@
                     <div class="product-list">
 
                         <!-- Product image-->
-                        <a class="h-100" style="aspect-ratio:2/2.5" href="productDetail.php?productID=<?php echo $row["id"]?>"><img src="<?php echo $row["picturePath"]; ?>" class="img-fitted" style="aspect-ratio:2/2.5; height:243px;"></a>
+                        
+                        <a class="h-100" style="aspect-ratio:2/2.5" href="productDetail.php?productID=<?php echo $row["id"]?>"><img src="<?php echo $row["picturePath"]; ?>" class="img-fitted" id="prod-pic"style="aspect-ratio:2/2.5; height:243px;"></a>
+                        
                         <!-- Product details-->
                         <div class="card-body d-flex flex-column pt-4">
                             <div class="text-center mt-auto">
@@ -197,6 +252,15 @@
             }
                 }
                     ?>
+                    <script>
+                    $(document).ready(function(){
+                        if($(window).width() < 786){
+                            $("#prod-pic").css({"height":"243px"});
+                            $("#grid").removeClass("product-grid");
+                            $("#grid").addClass("product-grid-mobile");
+                        }
+                    });
+                        </script>
 
             </div>
             

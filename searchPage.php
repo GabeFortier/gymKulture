@@ -85,7 +85,7 @@
             </div>
         </div>
         
-    <a class="nav-link nav-item" href="../index.html"><img src="./assets/trasnparent2_lgo2.png"></a>
+    <a class="nav-link nav-item" href="index.php"><img src="./assets/trasnparent2_lgo2.png"></a>
     <div style="display:flex; flex-direction: column-reverse; align-items: flex-end; justify-content: center;">  
                 <form method="POST" id="search" action="searchPage.php" class="mobile-form">
                 <div class="search small-search"> <input type="search" class="input" id="search" style="" name="searchInput" placeholder="Search" /> <button id="button" type="submit"><i class="fa fa-search"></i></button>
